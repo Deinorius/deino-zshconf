@@ -4,7 +4,7 @@
 pkgname=manjaro-zsh-config
 pkgver=0.25
 pkgrel=3
-pkgdesc="Zsh configuration for manjaro"
+pkgdesc="Zsh configuration loosely based on manjaro for my Arch install"
 arch=(any)
 url="https://github.com/Chrysostomus/$pkgname"
 _gitcommit=e19c7c5e902a3085f918fb1fc6d0c1fd43c559c8
@@ -29,7 +29,6 @@ package() {
 	install -D -m644 $srcdir/$pkgname-$_gitcommit/manjaro-zsh-prompt ${pkgdir}/usr/share/zsh/manjaro-zsh-prompt
 	install -D -m644 $srcdir/$pkgname-$_gitcommit/zsh-maia-prompt ${pkgdir}/usr/share/zsh/zsh-maia-prompt
 	install -D -m644 $srcdir/$pkgname-$_gitcommit/p10k.zsh ${pkgdir}/usr/share/zsh/p10k.zsh
-	install -D -m644 $srcdir/$pkgname-$_gitcommit/command-not-found.zsh ${pkgdir}/usr/share/zsh/functions/command-not-found.zsh
 	install -D -m640 $srcdir/$pkgname-$_gitcommit/rootzshrc ${pkgdir}/root/.zshrc
 	chmod 750 ${pkgdir}/root
 	mkdir -p $pkgdir/usr/share/zsh/scripts
